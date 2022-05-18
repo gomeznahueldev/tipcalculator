@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { ErrorProvider } from "./components/Error/Error";
+import { StateProvider } from "./useStateContext/useStateContext";
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./App.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <ErrorProvider>
+      <StateProvider>
+        <App />
+      </StateProvider>
+    </ErrorProvider>
+  </StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
