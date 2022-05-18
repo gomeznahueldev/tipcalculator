@@ -27,6 +27,7 @@
   #root {
     height: auto;
     justify-content: flex-start;
+    margin-top: 2rem;
   }
 
   .App {
