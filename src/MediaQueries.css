@@ -23,6 +23,12 @@
 }
 
 @media screen and (max-width: 576px) {
+
+  #root {
+    height: auto;
+    justify-content: flex-start;
+  }
+
   .App {
     min-width: 94%;
     margin: 0 1rem;
